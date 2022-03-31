@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/textShadow.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cont" id="cont">
+        <div class="text">
+            <img  height="100px" width="100px">
+            <h1 class="t" id="1"> <span class="count">01 </span> <span class="head">Hello</span>  </h1>
+        </div>
+        <div class="text">
+            <img  height="100px" width="100px" alt="">
+            <h1 class="t" id="1"> <span class="count">02</span> <span class="head">Hello</span> </h1>
+        </div>
+        <div class="text">
+            <img  height="100px" width="100px" alt="">
+            <h1 class="t" id="1"> <span class="count">03</span> <span class="head">Hello</span> </h1>
+        </div>
+        <div class="text">
+            <img  height="100px" width="100px" alt="">
+            <h1 class="t" id="1"> <span class="count">04</span> <span class="head">Hello</span> </h1>
+        </div>
+        <div class="text">
+            <img  height="100px" width="100px" >
+            <h1 class="t" id="1"> <span class="count">05</span> <span class="head">Hello</span> </h1>
+        </div>
+    </div>
+</body>
+<script>
+    let q=document.getElementById("cont");
+    let len=q.children.length;
+    for(let i=0;i<len;i++)
+    {
+       let x=q.children[i].children[1].children[0];
+       
+       let spam=x.children[0];
+       let head=x.children[1];
+       x.addEventListener('mouseover',(e)=>{
+       let a= e.target.parentElement.parentElement.children[0];
+       a.setAttribute("src","emoji.png");
+       a.style.visibility="visible";
+       
+    });
+    x.addEventListener('mouseout',(e)=>{
+       let a= e.target.parentElement.parentElement.children[0];
+       a.removeAttribute("src","emoji.png");
+       a.style.visibility="hidden";
+       
+    });
+
+    }
+</script>
+</html>

@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: green;
+    overflow-x: hidden;
+}
+.text{
+    display: flex;
+    align-items: center;
+
+}
+.text img{
+    outline: none;
+    border: none;
+    visibility: hidden;
+    position: absolute;
+    z-index: 0;
+}
+.text h1{
+    
+    padding: 5px;
+    margin: 0;
+    font-size: 10rem;
+    color: white;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;
+    transition: 0.3s;
+}
+.count{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    transition: 0.3s;
+    padding-left:20vh;
+    cursor: pointer;
+}
+.count:hover{
+    -webkit-text-fill-color: white;
+}
+.text h1:hover{
+    -webkit-text-fill-color: transparent;
+    transition: 0.3s;
+}
+.head{
+   margin-left: 300px;
+}
